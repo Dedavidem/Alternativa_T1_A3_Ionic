@@ -1,0 +1,42 @@
+<!--<ion-header> 
+  <ion-toolbar color = "tertiary">
+    <ion-title style = "font-family:Ink Free; color:rgb(255, 255, 255);  font-weight:bold; font-size: 150%;">Página 3 - Módulos</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar color = "tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button [icon]="icon" style = "font-family:Berlin Sans FB;"
+          [text]="text"  color="light" font
+          defaultHref = "inicio">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+-->
+<app-componentes titulo2 = "Página 3 - Módulos">  </app-componentes>
+<ion-content>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom"  color = "tertiary">
+
+      <ion-tab-button tab = "dam1" (click)="openToastDAM1()" expand="block">
+        <ion-icon name="desktop-outline"></ion-icon>
+        <ion-label>1º DAM</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab = "dam2" (click)="openToastDAM2()" expand="block">
+        <ion-icon name ="phone-portrait-sharp"></ion-icon>
+        <ion-label>2º DAM</ion-label>
+      </ion-tab-button>
+         
+      <ion-tab-button tab = "fct" (click)="openToastFCT()" expand="block">
+        <ion-icon name ="accessibility-sharp"></ion-icon>
+        <ion-label>FCT</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+
+
+</ion-content>

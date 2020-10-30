@@ -1,0 +1,81 @@
+
+<!--
+<ion-header>
+  <ion-toolbar color = "medium">
+    <ion-title style = "font-family:Ink Free; color:#ffffff;  font-weight:bold; font-size: 150%;">Página 2 - Datos Personales</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar color = "medium">
+    <ion-buttons slot="start">
+      <ion-back-button [icon]="icon" style = "font-family:Berlin Sans FB; color:#213970;"
+          [text]="text" 
+          defaultHref = "inicio">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+ 
+
+
+</ion-header>
+ -->
+
+  <app-componentes titulo = "Página 2 - Datos Personales">  </app-componentes>
+
+  <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">  
+      <ion-refresher-content  
+      pullingIcon="chevron-down-circle-sharp"  
+      pullingText="Arrastra para refrescar"  
+      refreshingSpinner="bubbles"  
+      refreshingText="...Refrescando..."></ion-refresher-content>  
+    </ion-refresher>  
+
+  <ion-item>
+    <ion-label fixed  style = "font-family:Segoe Print; font-weight:bold;" color="tertiary">Nombre: </ion-label>
+    <ion-input style = "font-family:Ink free; font-weight:bold; font-size: 120%;" [disabled] = "false" 
+    type="text" maxlength="20" value = {{nombre}} placeholder="Nombre de Usuario"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed  style = "font-family:Segoe Print; font-weight:bold;" color="tertiary">Apellidos: </ion-label>
+    <ion-input style = "font-family:Ink free;  font-weight:bold; font-size: 120%;" [disabled] = "false" 
+    type="text" maxlength="60" value = {{apellidos}} placeholder="Apellidos de Usuario"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed  style = "font-family:Segoe Print; font-weight:bold;" color="tertiary">Edad: </ion-label>
+    <ion-input  style = "font-family:Ink free;  font-weight:bold; font-size: 120%;" [disabled] = "false" 
+    type="text" maxlength="3" value = {{edad}} placeholder="Edad de Usuario"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed  style = "font-family:Segoe Print; font-weight:bold;" color="tertiary">Teléfono: </ion-label>
+    <ion-input style = "font-family:Ink free;  font-weight:bold; font-size: 120%;" [disabled] = "false"
+     type="text" maxlength="20" value = {{telf}} placeholder="Teléfono de Usuario"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed  style = "font-family:Segoe Print; font-weight:bold;" color="tertiary">Contraseña: </ion-label>
+    <ion-input style = "font-family:Ink free;  font-weight:bold; font-size: 120%;" type="password" 
+    value = {{password}} [(ngModel)]="password" placeholder="Contraseña de Usuario"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed style = "font-family:Segoe Print; font-weight:bold;" color="tertiary">Localidad: </ion-label>
+    <ion-input  style = "font-family:Ink free;  font-weight:bold; font-size: 120%;" [disabled] = "false" 
+    type="text" maxlength="40" value = {{localidad}} placeholder="Localidad de Usuario"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed  style = "font-family:Segoe Print; font-weight:bold;" color="tertiary">Email: </ion-label>
+    <ion-input style = "font-family:Ink free;  font-weight:bold; font-size: 120%;" [disabled] = "false" 
+    type="text" maxlength="40" value = {{email}} placeholder="Email de Usuario"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed  style = "font-family:Segoe Print; font-weight:bold;" color="tertiary">Curso: </ion-label>
+    <ion-input style = "font-family:Ink free;  font-weight:bold; font-size: 120%;" [disabled] = "false" 
+    type="text" maxlength="50" value = {{cursando}} placeholder="Curso de Usuario"> </ion-input>
+  </ion-item>
+
+</ion-content>

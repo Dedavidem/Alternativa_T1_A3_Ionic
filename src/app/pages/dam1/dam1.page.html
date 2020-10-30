@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar color = "warning">
+    <ion-title style = "font-family:Bahnschrift; color:rgb(24, 199, 24);  font-weight:bold; font-size: 120%;">Curso: 1º DAM</ion-title>
+  </ion-toolbar>
+
+
+  <ion-toolbar color = "warning">
+    <ion-buttons slot="start">
+      <ion-back-button [icon]="icon" style = "font-family:Berlin Sans FB;"
+          [text]="text"  color="primary" font
+          defaultHref = "inicio">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item color = "secondary">
+      <ion-label style = "font-family:Bahnschrift;  font-weight:bold; font-size: 120%; color:white">Listado de Cursos</ion-label>
+    </ion-item>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://cdn.dribbble.com/users/5485/screenshots/2187027/programming.png">
+    </ion-avatar>
+    <ion-label style = "font-family:Agency FB; font-weight:bold; font-size: 120%;">Programación</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="checkProg"  (click)="openToastProg()" expand="block"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://e7.pngegg.com/pngimages/198/70/png-clipart-pile-of-blue-and-orange-frames-illustration-database-ico-icon-database-icons-noun-project-apple-icon-image-format.png">
+    </ion-avatar>
+    <ion-label style = "font-family:Agency FB; font-weight:bold; font-size: 120%;">Bases de Datos</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="checkBdd"  (click)="openToastBdd()" expand="block"></ion-checkbox>
+ <!--    <ion-checkbox (click) = "addValue($event)" color="secondary"[(ngModel)]="checked" color="secondary"></ion-checkbox>
+ -->
+  </ion-item>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Sublime_Text_3_logo.png">
+    </ion-avatar>
+    <ion-label style = "font-family:Agency FB; font-weight:bold; font-size: 120%;">Lenguajes de Marcas</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="checkLm"  (click)="openToastLm()" expand="block"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://image.flaticon.com/icons/png/512/1541/1541402.png">
+    </ion-avatar>
+    <ion-label style = "font-family:Agency FB; font-weight:bold; font-size: 120%;">Entornos de Desarrollo</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="checkEnt"  (click)="openToastEnt()" expand="block"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://www.pngkey.com/png/full/671-6719237_desktop-jitsi-png-linux-windows-icon.png">
+    </ion-avatar>
+    <ion-label style = "font-family:Agency FB; font-weight:bold; font-size: 120%;">Sistemas Informáticos</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="checkSis"  (click)="openToastSis()" expand="block"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/company-77-907100.png">
+    </ion-avatar>
+    <ion-label style = "font-family:Agency FB; font-weight:bold; font-size: 120%;">Formación y Orientación Laboral</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="checkFol"  (click)="openToastFol()" expand="block"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://image.flaticon.com/icons/png/512/1377/1377975.png">
+    </ion-avatar>
+    <ion-label style = "font-family:Agency FB; font-weight:bold; font-size: 120%;">Inglés</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="checkEng" (click)="openToastEng()" expand="block"></ion-checkbox>
+  </ion-item>
+
+</ion-list>
+
+<ion-item>
+
+<div class="tabs tabs-item-hide">
+  <a class="tab-item" href="modulos">
+   <p style = "font-family:Bahnschrift;  font-weight:bold; font-size: 120%;">Cerrar Pestaña</p> 
+  </a>
+
+</div>
+</ion-item>
+
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color = "danger">
+    <ion-title style = "font-family:Bahnschrift; color:azure;  font-weight:bold; font-size: 120%;">Curso: 2º DAM</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar color = "danger">
+    <ion-buttons slot="start">
+      <ion-back-button [icon]="icon" style = "font-family:Berlin Sans FB; color: rgb(255, 167, 2);"
+          [text]="text"
+          defaultHref = "inicio">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+
+<ion-content>
+  
+
+  <ion-list>
+    <ion-item color = "warning">
+      <ion-label style = "font-family:Bahnschrift;  font-weight:bold; font-size: 120%; color: black">Listado de Cursos</ion-label>
+    </ion-item>
+
+    <!--
+ </ion-item>
+  <ion-item *ngFor = "let elemento of elementos">
+    <ion-icon name={{elemento.icono}}></ion-icon>
+    <ion-label  routerLink = {{elemento.ruta}}>{{elemento.titulo}}</ion-label>
+  </ion-item>
+  -->
+    <ion-item *ngFor = "let elemento of elementos" (click) = "onClick(elemento)">
+      <ion-avatar slot="start">
+        <img src={{elemento.icono}}>
+      </ion-avatar>
+      <ion-label style = "font-family:Agency FB; font-weight:bold; font-size: 120%;">{{elemento.asignatura}}</ion-label>
+      <ion-checkbox color = {{elemento.color}} [(ngModel)] = "elemento.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  
+<ion-item>
+  <div class="tabs tabs-item-hide">
+    <a class="tab-item" href="modulos">
+     <p style = "font-family:Bahnschrift;  font-weight:bold; font-size: 120%;">Cerrar Pestaña</p> 
+    </a>
+  </div>
+</ion-item>
+
+</ion-content>
